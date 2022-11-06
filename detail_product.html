@@ -1,0 +1,1046 @@
+  <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css"
+            integrity="sha384-/frq1SRXYH/bSyou/HUp/hib7RVN1TawQYja658FEOodR/FQBKVqT9Ol+Oz3Olq5"
+            crossorigin="anonymous" />
+        <title>Sản phẩm</title>
+        <link rel="stylesheet" href="../owlcarousel/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="../owlcarousel/assets/owl.theme.default.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="../owlcarousel/owl.carousel.min.js"></script>
+    </head>
+
+    <body>
+        <style>
+            :root {
+                --color: #858080;
+                --color_icon: #000;
+                --with_chung: 1200px;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: Arial, Helvetica, Verdana, sans-serif;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+           
+
+            .box_menu {
+                max-width: 1200px;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                align-items: center;
+                align-content: center;
+
+            }
+
+            .logo_shop img {
+                max-width: 200px;
+                height: 60px;
+            }
+
+    
+
+            .nav {
+                width: 100%;
+                position: fixed;
+                background: #fff;
+                z-index: 1000;
+            }
+
+            .menu_cha {
+                position: relative;
+                padding: 0;
+                display: flex;
+                list-style: none;
+                justify-content: center;
+
+
+            }
+
+            .menu_cha li {
+                padding: 24px;
+            }
+
+            .menu_cha li a {
+                color: var(--color);
+                transition: 0.5s ease;
+            }
+
+            .menu_cha li a:hover {
+                color: rgb(56, 55, 55);
+            }
+
+            .menu_con {
+                z-index: 100;
+                position: absolute;
+                list-style: none;
+                padding: 5px;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.4s ease-in;
+            }
+
+            .fa-angle-left {
+                margin-left: 10px;
+                transform: rotate(-90deg);
+            }
+
+            .menu_con li {
+                padding: 5px;
+            }
+
+            .menu_cha li:hover ul {
+                opacity: 1;
+                visibility: visible;
+                margin-top: 15px;
+                border-radius: 5px;
+                background: rgb(218, 215, 215);
+
+            }
+
+            .box_icon {
+                display: flex;
+            }
+
+            .icon_1 {
+                padding: 20px;
+            }
+
+            .icon_1 i {
+                color: var(--color_icon);
+            }
+
+            /* Banner */
+            .box_banner {
+                z-index: -1;
+                position: relative;
+                height: 315px;
+                max-width: 1920px;
+                padding-top: 97.6px;
+                margin: 0 auto;
+                overflow: hidden;
+            }
+
+            .banner_1 {
+                width: 100%;
+                z-index: 10;
+                position: absolute;
+            }
+
+            .banner {
+                position: absolute;
+                background-color: #33455c;
+                width: 1920px;
+                z-index: 30;
+                height: 315px;
+                opacity: 0.6;
+                margin: 0 auto;
+            }
+
+            .banner_3 {
+                max-width: 1200px;
+                height: 315px;
+                display: flex;
+                align-items: center;
+                align-content: center;
+                margin: 0 auto;
+
+            }
+
+            .banner_3 p {
+                z-index: 200;
+                color: #fff;
+                font-size: 37px;
+
+                position: absolute;
+            }
+
+            .ground_banner p {
+                margin-top: -100px;
+            }
+
+            .box_banner img {
+                height: 315px;
+                width: 100%;
+            }
+
+            /* title */
+            .title_fist {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            .title_fist ul {
+                display: flex;
+                list-style: none;
+                display: flex;
+            }
+
+            .title_fist ul li {
+                display: flex;
+            }
+
+            .title_fist ul li a {
+                color: var(--color);
+                align-items: center;
+                align-content: center;
+                display: flex;
+            }
+
+            .title_fist ul li a p {
+                margin-right: 10px;
+                margin-left: 10px;
+            }
+
+            /* details */
+            .box_details {
+                max-width: 1200px;
+                padding-top: 50px;
+                margin: 0 auto;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .box_details_1 {
+                width: 40%;
+            }
+
+            .box_details_2 {
+                width: 60%;
+            }
+
+            .nav-slider {
+                width: 90%;
+                border-radius: 10px;
+            }
+
+            .box_details_2 h3 {
+                font-size: 24px;
+            }
+
+            .box_details_2 .price {
+                padding-bottom: 15px;
+                font-size: 19px;
+            }
+
+            .box_details_2 del {
+                color: rgb(103, 104, 105);
+                margin-right: 10px;
+            }
+
+            .box_details_2 ins {
+                text-decoration: none;
+                font-weight: 600;
+            }
+
+            .conten {
+                color: var(--color);
+                letter-spacing: 1px;
+            }
+
+            .add_cart {
+                margin-top: 25px;
+                margin-bottom: 25px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            .quatily {
+                width: 7%;
+                margin-right: 8px;
+            }
+
+            .quatily input {
+                width: 100%;
+                height: 38px;
+                border: 2px solid var(--color);
+                border-radius: 5px;
+                font-size: 17px;
+                color: var(--color);
+            }
+
+            .buying_cart_button input {
+                background-color: #FFD706;
+                color: rgb(243, 238, 238);
+                font-size: 17px;
+                border: none;
+                border-radius: 5px;
+                transition: 0.5s;
+            }
+
+            .buying_cart_button input:hover {
+                opacity: 0.8;
+                color: #fff;
+            }
+
+            .add_cart_button .box_add {
+                background-color: #fff;
+                color: #FFD706;
+                font-size: 15px;
+                font-weight: 600;
+                border-radius: 5px;
+                transition: 0.5s;
+                border: 2px solid #FFD706;
+            }
+
+            .add_cart_button .box_add i {
+                margin-right: 5px;
+            }
+
+            .add_cart_button .box_add:hover {
+                opacity: 0.7;
+            }
+
+            .add_cart_button .box_add,
+            .buying_cart_button input {
+                width: 100%;
+                height: 45px;
+            }
+
+            .add_cart_button {
+                width: 58%;
+            }
+
+            .box_add {
+                display: flex;
+                align-items: center;
+                align-content: center;
+                justify-content: center;
+            }
+
+            .buying_cart_button {
+                width: 33%;
+
+            }
+
+            .list_love {
+                margin-bottom: 15px;
+                font-size: 17px;
+            }
+
+            .list_love i {
+                margin-right: 10px;
+                color: #FFD706;
+            }
+
+            .list_love a {
+                color: #FFD706;
+                font-weight: 200;
+            }
+
+            .list_love a:hover {
+                border-bottom: 1px solid #FFD706;
+
+            }
+
+            /* comment */
+            #wapper {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            .nav-tabs {
+                margin-top: 30px;
+                display: flex;
+                list-style: none;
+
+            }
+
+            .nav-tabs-1 {
+                color: #86868B;
+                font-size: 15px;
+                font-weight: 700;
+                line-height: 25px;
+            }
+
+            ul {
+                padding: 0;
+            }
+
+            .nav-tabs-li {
+                display: block;
+                padding-right: 40px;
+            }
+
+            .nav-tabs-li a {
+                font-size: 17px;
+                text-decoration: none;
+                position: relative;
+            }
+
+            .binh_luan {
+
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+
+            .bl {
+                width: 60%;
+            }
+
+            .bl textarea {
+                outline: none;
+                width: 100%;
+                height: 60px;
+            }
+
+            .name_cm {
+                width: 30%;
+            }
+
+            .name_cm .name_cm_01 {
+                outline: none;
+                width: 100%;
+            }
+
+            .import_cm {
+                border: none;
+                outline: none;
+                border-radius: 5px;
+                width: 5%;
+                height: 22px;
+                background-color: #3d91e4;
+                color: #fff;
+                transition: .5s ease;
+            }
+
+            .import_cm:hover {
+                background-color: #69a8e8;
+            }
+
+            .box_bl_sp_001 {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                width: 100%;
+                height: 70px;
+            }
+
+            .box_bl_sp_01 {
+                display: flex;
+                height: calc(70px / 2);
+                align-items: center;
+
+            }
+
+            .box_answer_cm {
+                font-size: 14px;
+                padding-left: 20px;
+            }
+
+            /* định vị backround cho the a */
+            .nav-tabs-li a::after {
+                content: "";
+                position: absolute;
+                height: 3px;
+                width: 100%;
+                bottom: -5px;
+                right: 0px;
+                transform: scale(0.1);
+                transition: .5s;
+
+            }
+
+            /* những tk nào thuôc class active có màu và khi hover hiện màu */
+            .nav-tabs-li.active a::after,
+            .nav-tabs-li:hover a::after {
+                background: #FFD706;
+
+                transform: scale(1.0);
+                transition: .5s;
+            }
+
+            .tab-content {
+                padding: 20px 0px;
+            }
+
+            .tab-content-item {
+                background: rgb(239, 240, 241);
+                padding: 20px;
+
+            }
+
+            .list_product {
+                display: flex;
+                flex-wrap: wrap;
+                --colunm_Sp: 4;
+                --spacing: 20px;
+            }
+
+            .box-element-sanpham {
+                overflow: hidden;
+                transition: 0.5s ease;
+                margin-left: var(--spacing);
+                margin-bottom: var(--spacing);
+                width: calc(calc(100% / var(--colunm_Sp)) - var(--spacing));
+            }
+
+            .pictures img {
+                border-radius: 10px;
+                width: 100%;
+                height: 318px;
+                transition: 0.5s ease;
+            }
+
+            .pictures img:hover {
+                opacity: 0.8;
+            }
+
+            .view_user {
+                margin-bottom: 3px;
+                color: #FFD706;
+            }
+
+            .price-amount {
+                font-weight: 600;
+            }
+
+            .title_sp_similar {
+                color: var(--color);
+                margin-top: 5px;
+            }
+
+            /* comment */
+            .box_comment,
+            .box_sp_similar {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding-bottom: 80px;
+                padding-top: 80px;
+            }
+
+            .box_sp_similar {
+                padding-top: 50px !important;
+            }
+
+            .box_comment h3,
+            .box_sp_similar h3 {
+                font-size: 24px;
+                text-align: center;
+            }
+
+            .title_01 {
+                color: var(--color);
+                text-align: center;
+            }
+
+            form {
+                text-align: center;
+            }
+
+            .form_ground {
+                display: flex;
+                justify-content: center;
+                padding-bottom: 30px;
+            }
+
+            .form_ground p {
+                margin-right: 15px;
+                margin-left: 15px;
+            }
+
+            .form_ground input {
+                width: 30%;
+                height: 45px;
+                padding-left: 15px;
+                outline: none;
+                border: 1px solid var(--color);
+                border-radius: 8px;
+                font-size: 17px;
+                color: var(--color);
+            }
+
+            textarea {
+                border-radius: 8px;
+            }
+
+            .form_ground_1 input {
+                width: 294px;
+                height: 60px;
+                border-radius: 8px;
+                outline: none;
+                border: none;
+                font-size: 15px;
+                background-color: #FFD706;
+                transition: 0.5s;
+            }
+
+            .form_ground_1 input:hover {
+                opacity: 0.8;
+            }
+
+            /* Footer */
+            .box_footer {
+                background: rgba(39, 35, 67, 1);
+                max-width: 1920px;
+                color: rgb(236, 235, 235);
+                margin: 0 auto;
+            }
+
+            .footer {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding-top: 30px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+            }
+
+            .footer h3 {
+                font-size: 20px;
+                font-weight: 400;
+            }
+
+            .box_footer_1 img {
+                width: 200px;
+                height: 80px;
+            }
+
+            .box_footer_1 span {
+                color: rgb(205, 199, 199);
+                font-size: 15px;
+            }
+
+            .icon-footer ul {
+                padding: 0;
+                display: flex;
+                list-style: none;
+            }
+
+            .icon-footer ul li {
+                padding-right: 18px;
+            }
+
+            .icon-footer ul li a i {
+                color: rgb(236, 235, 235);
+                transform: scale(1.3);
+            }
+
+            .icon-footer ul li a i:hover {
+                transform: scale(1.45);
+            }
+
+            .box_footer_2,
+            .box_footer_3,
+            .box_footer_4 {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .box_footer_2 ul,
+            .box_footer_3 ul,
+            .box_footer_4 ul {
+                list-style: none;
+                padding: 0;
+            }
+
+            .box_footer_2 ul li,
+            .box_footer_3 ul li,
+            .box_footer_4 ul li {
+                padding-bottom: 8px;
+            }
+
+            .box_footer_2 ul a,
+            .box_footer_3 ul a,
+            .box_footer_4 ul a {
+                font-size: 15px;
+                color: rgb(205, 199, 199);
+            }
+
+            .element_0123 ul li a {
+                position: relative;
+                padding-bottom: 2px;
+                font-size: 13px;
+            }
+
+            .element_0123 ul li a::before {
+                content: "";
+                position: absolute;
+                display: block;
+                background: #858080;
+                height: 1px;
+                width: 100%;
+                left: 0;
+                bottom: 0;
+                transform-origin: top left;
+                transition: transform 0.4s ease;
+                transform: scaleX(0);
+            }
+
+            .element_0123 ul li a:hover::before {
+                transform: scaleX(1);
+            }
+        </style>
+
+        <!-- Menu -->
+        <div class="box_shop">
+            <div class="nav">
+                <div class="box_menu">
+                    <div class="logo_shop">
+                        <img src="./image/Screenshot_2022-11-04_132926-removebg-preview.png" alt="">
+                    </div>
+                    <div class="box_menu_01">
+                        <ul class="menu_cha">
+                            <li><a href="./index.html">Trang chủ</a></li>
+                            <li><a href="./pages/pageBrand.html">Sản phẩm</a><i class="fa-solid fa-angle-left"></i>
+                                <ul class="menu_con">
+                                    <li><a href="#">Dưỡng da</a></li>
+                                    <li><a href="#">Mặt nạ</a></li>
+                                    <li><a href="#">Trang điểm</a></li>
+                                    <li><a href="#">Chống nắng</a></li>
+                                    <li><a href="#">Chăm sóc tóc và cơ thể</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./about_us.html">Giới thiệu</a></li>
+                            <li><a href="./blog.html">Bài viết</a></li>
+                            <li><a href="./contac_us.html">Liên hệ</a></li>
+                        </ul>
+                    </div>
+                    <div class="box_icon">
+                        <div class="icon_1">
+                            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                        </div>
+                        <div class="icon_1">
+                            <a href="./cart.html"> <i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+                        <div class="icon_1">
+                            <a href="./login_register/Login.html"><i class="fa-solid fa-user"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Banner -->
+            <div class="box_banner">
+                <div class="banner_1">
+                    <img src="./banner dự án1/nas.jpeg" alt="">
+                </div>
+                <div class="banner">
+
+                </div>
+                <div class="banner_3">
+                    <p>Chi tiết sản phẩm</p>
+                </div>
+            </div>
+            <!-- Main -->
+            <div class="box_main">
+                <div class="main">
+                    <div class="title_fist">
+                        <ul>
+                            <li><a href="#">Trang chủ<p>/</p></a></li>
+                            <li><a href="#">Loại hàng<p>/</p></a></li>
+                            <li><a href="#">Sản phẩm</a></li>
+                        </ul>
+                    </div>
+                    <div class="box_details">
+                        <div class="box_details_1">
+                            <div class="product-slider">
+                                <div class="img-main">
+                                    <div class="main">
+                                        <div class="slider slider-for">
+                                            <div>
+                                                <a href="#">
+                                                    <img class="nav-slider"
+                                                        src="./banner dự án1/sp2.jpg"
+                                                        alt="image"></a>
+                                            </div>
+                                        </div>
+                                        <div class="slider slider-nav">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box_details_2">
+                            <h3>Tên sản phẩm</h3>
+                            <div class="price">
+                                <del>
+                                    <span class="price-amount">4.500.700</span><span class="price-currency">₫</span>
+
+                                </del>
+                                <ins>
+                                    <span class="price-amount">3.590.000</span><span class="price-currency">₫</span>
+                                </ins>
+                            </div>
+                            <div class="conten">
+                                <span>
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet culpa vitae ex, omnis
+                                    dolorum aliquid voluptas, id architecto facere sit commodi cum laudantium, quia
+                                    exercitationem voluptatibus! Tempore eaque qui consectetur!
+                                </span>
+                            </div>
+                            <div class="add_cart">
+                                <div class="quatily">
+                                    <input type="number" min="1" max="100" name="" id="" value="1">
+                                </div>
+                                <div class="buying_cart_button">
+                                    <input type="submit" name="add_cart" value="Mua ngay">
+                                </div>
+                                <div class="add_cart_button">
+                                    <button class="box_add"><i class="fa-solid fa-cart-shopping"></i>Thêm vào
+                                        giỏ</button>
+                                </div>
+                            </div>
+                            <div class="list_love">
+                                <span><i class="fa-regular fa-heart"></i><a href="#">Thêm vào danh sách yêu
+                                        thích</a></span>
+                            </div>
+                            <div class="tags">
+                                <span>Tags: Loại 1, Loại 2</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="wapper">
+                        <div class="tabs">
+                            <ul class="nav-tabs">
+                                <li class="nav-tabs-li"><a class="nav-tabs-1" href="#menu_1">Đánh giá(<span></span>)</a>
+                                </li>
+                                <li class="nav-tabs-li"><a class="nav-tabs-1" href="#menu_2">Thảo luận</a></li>
+                                <li class="nav-tabs-li"><a class="nav-tabs-1" href="#menu_3">Mô tả</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div id="menu_1" class="tab-content-item">
+                                    <div class="bl_menu_2">
+                                        <!-- Chạy theo id san phẩm  -->
+                                        <div class="box_bl_sp">
+
+                                            <div class="box_bl_sp_001">
+                                                <div class="box_bl_sp_01">
+                                                    <a href="#" style="text-decoration: none; color: blue;"></a>
+                                                </div>
+                                                <div class="box_answer_cm">
+                                                    <a href="#" style="text-decoration: none; color:red;">:</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="menu_2" class="tab-content-item">
+                                    <div id="fb-root"></div>
+                                    <script async defer crossorigin="anonymous"
+                                        src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v14.0&appId=499327621765895&autoLogAppEvents=1"
+                                        nonce="2fNQYZcv"></script>
+                                    <div class="fb-comments" data-href="http://shopucha.store" data-width="1200"
+                                        data-numposts="100"></div>
+                                </div>
+                                <div id="menu_3" class="tab-content-item">
+                                    <h2>Menu 3</h2>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas dolorem,
+                                        consectetur eaque saepe debitis magnam et, corrupti eius enim expedita quod qui
+                                        impedit! Architecto dicta aperiam corporis quos nobis ducimus.</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas dolorem,
+                                        consectetur eaque saepe debitis magnam et, corrupti eius enim expedita quod qui
+                                        impedit! Architecto dicta aperiam corporis quos nobis ducimus.</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas dolorem,
+                                        consectetur eaque saepe debitis magnam et, corrupti eius enim expedita quod qui
+                                        impedit! Architecto dicta aperiam corporis quos nobis ducimus.</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas dolorem,
+                                        consectetur eaque saepe debitis magnam et, corrupti eius enim expedita quod qui
+                                        impedit! Architecto dicta aperiam corporis quos nobis ducimus.</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas dolorem,
+                                        consectetur eaque saepe debitis magnam et, corrupti eius enim expedita quod qui
+                                        impedit! Architecto dicta aperiam corporis quos nobis ducimus.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box_comment">
+            <div class="comment">
+                <h3>Để lại bình luận</h3>
+                <div class="title_01">
+                    <p>Hãy để lại những lời góp ý cũng như những điều muốn <br> Nice Face còn thiều xót</p>
+                </div>
+                <form action="">
+                    <div class="form_ground">
+                        <input type="text" placeholder="Email:">
+                        <p></p>
+                        <input type="text" placeholder="Họ tên:">
+                    </div>
+                    <div class="form_ground">
+                        <textarea name="text" id="" cols="105" rows="10" placeholder="Lời nhắn nhủ"></textarea>
+                    </div>
+                    <div class="form_ground_1">
+                        <input type="submit" name="submit" value="Gửi đi">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="box_sp_similar">
+            <div class="sp_similar">
+                <h3>Sản phẩm tương tự</h3>
+                <div class="title_01">
+                    <p>Những sản phẩm tương tự để cho khách hàng có thể tham khảo <br> thêm về các loại mỹ phẩm xịn xò
+                    </p>
+                </div>
+                <div class="list_product">
+                    <div class="box-element-sanpham">
+                        <div class="pictures"><a href="#">
+                                <img src="./banner dự án1/sp2.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="title-sanpham">
+                            <p class="view_user"><i class="fa-regular fa-star"></i>Lượt xem</p>
+                            <p class="title_sp_similar">Skin Care</p>
+                        </div>
+                        <div class="price-sanpham">
+                            <span class="price-amount">300.000</span> <span class="price-currency">₫</span>
+                        </div>
+                    </div>
+                    <div class="box-element-sanpham">
+                        <div class="pictures"><a href="#"><img src="./banner dự án1/sp23.webp" alt=""></a>
+                        </div>
+                        <div class="title-sanpham">
+                            <p class="view_user"><i class="fa-regular fa-star"></i>Lượt xem</p>
+                            <p class="title_sp_similar">Skin Care</p>
+                        </div>
+                        <div class="price-sanpham">
+                            <span class="price-amount">300.000</span> <span class="price-currency">₫</span>
+                        </div>
+                    </div>
+                    <div class="box-element-sanpham">
+                        <div class="pictures"><a href="#"><img src="./banner dự án1/sp3.jpg" alt=""></a>
+                        </div>
+                        <div class="title-sanpham">
+                            <p class="view_user"><i class="fa-regular fa-star"></i>Lượt xem</p>
+                            <p class="title_sp_similar">Skin Care</p>
+                        </div>
+                        <div class="price-sanpham">
+                            <span class="price-amount">300.000</span> <span class="price-currency">₫</span>
+                        </div>
+                    </div>
+                    <div class="box-element-sanpham">
+                        <div class="pictures"><a href="#">
+                                <img src="./banner dự án1/sp4.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="title-sanpham">
+                            <p class="view_user"><i class="fa-regular fa-star"></i>Lượt xem</p>
+                            <p class="title_sp_similar">Skin Care</p>
+                        </div>
+                        <div class="price-sanpham">
+                            <span class="price-amount">300.000</span> <span class="price-currency">₫</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="box_footer">
+            <div class="footer">
+                <div class="box_footer_1">
+                    <div class="logo">
+                        <img src="./image/Screenshot_2022-11-04_132926-removebg-preview.png" alt="">
+                    </div>
+                    <div class="">
+                        <span>Tuy không xinh <br> Nhưng tôi biết thế nào <br> cho chị em đẹp. </span>
+                    </div>
+                    <div class="icon-footer">
+                        <ul class="sci">
+                            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="box_footer_2">
+                    <h3>Của hàng</h3>
+                    <div class="element_0123">
+                        <ul>
+                            <li><a href="#">Dưỡng da</a></li>
+                            <li><a href="#">Mặt nạ</a></li>
+                            <li><a href="#">Trang điểm</a></li>
+                            <li><a href="#">Chống nắng</a></li>
+                            <li><a href="#">Chăm sóc tóc và cơ thể</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="box_footer_3">
+                    <h3>Liên kết nhanh</h3>
+                    <div class="element_0123">
+                        <ul>
+                            <li><a href="./blog.html">Bài viết</a></li>
+                            <li><a href="./login_register/Login.html">Đăng nhập</a></li>
+                            <li><a href="./cart.html">Giỏ hàng</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="box_footer_4">
+                    <h3>Liên hệ</h3>
+                    <div class="element_0123">
+                        <ul>
+                            <li><a href="#"><i class="fa-solid fa-location-dot"></i> 86/53 Tân Chánh Hiệp, Đông Bắc,
+                                    Quận 12, TP HCM</a></li>
+                            <li><a href="#"><i class="fa-solid fa-phone"></i> 0366764838</a></li>
+                            <li><a href="#"><i class="fa-regular fa-envelope"></i> nicaface@gmail.com</a></li>
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </body>
+    <script>
+        $(document).ready(function () {
+            var owl = $('.owl-carousel');
+            owl.owlCarousel({
+                items: 1,
+                loop: false,
+                margin: 1,
+                autoplay: NodeFilter,
+                autoplayTimeout: 4000,
+                autoplayHoverPause: NodeFilter
+            });
+            $('.play').on('click', function () {
+                owl.trigger('play.owl.autoplay', [1000])
+            })
+            $('.stop').on('click', function () {
+                owl.trigger('stop.owl.autoplay')
+            })
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.tab-content-item').hide()
+            $('.tab-content-item:first-child').fadeIn()
+            $('.nav-tabs li').click(function () {
+                // active nab-tab
+                $('.nav-tabs li').removeClass('active')
+                $(this).addClass('active');
+
+                // show tab-content item
+                let id_tab_content = $(this).children('a').attr('href')
+                $('.tab-content-item').hide();
+                $(id_tab_content).fadeIn();
+                return false;
+            });
+        });
+    </script>
+
+    </html>
